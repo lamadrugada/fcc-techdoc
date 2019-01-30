@@ -25,8 +25,8 @@
             <li><a href="#Elements" class="nav-link">elements</a></li>
             <li><a href="#Operators" class="nav-link">operators</a></li>
             <li><a href="#Queries_And_Subqueries" class="nav-link">queries and subqueries</a></li>
-            <li><a href="#" class="nav-link">data manipulation</a></li>
-            <li><a href="#" class="nav-link">resources</a></li>
+            <li><a href="#Data_Manipulation" class="nav-link">data manipulation</a></li>
+            <li><a href="#Resources" class="nav-link">resources</a></li>
       </ul>
     </nav>
 
@@ -208,7 +208,34 @@
       <section class="main-section">
 
       </section>
-      <section class="main-section">
+      <section class="main-section" id="Data_Manipulation">
+        <header><h2>DAta Manipulation</h2></header>
+        <p>The Data Manipulation Language (DML) is the subset of SQL used to add, update and delete data:</p>
+        <ul>
+          <li>INSERT adds rows (formally tuples) to an existing table, e.g.:</li>
+          <code>INSERT INTO example<br>
+            (column1, column2, column3)<br>
+            VALUES<br>
+            ('test', 'N', NULL);
+          </code>
+          <li>UPDATE modifies a set of existing table rows, e.g.:</li>
+          <code>UPDATE example<br>
+            SET column1 = 'updated value'<br>
+            WHERE column2 = 'N';
+          </code>
+          <li>DELETE removes existing rows from a table, e.g.:</li>
+          <code>DELETE FROM example<br>
+            WHERE column2 = 'N';
+          </code>
+          <li>MERGE is used to combine the data of multiple tables. It combines the INSERT and UPDATE elements. It is defined in the SQL:2003 standard; prior to that, some databases provided similar functionality via different syntax, sometimes called "upsert".</li>
+          <code>MERGE INTO table_name USING table_reference ON (condition)<br>
+            WHEN MATCHED THEN<br>
+            UPDATE SET column1 = value1 [, column2 = value2 ...]<br>
+            WHEN NOT MATCHED THEN<br>
+            INSERT (column1 [, column2 ...]) VALUES (value1 [, value2 ...])
+          </code>
+        </ul>
+
 
       </section>
       <section class="main-section">
