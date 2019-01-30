@@ -24,7 +24,7 @@
             <li><a href="#Data_Types" class="nav-link">data types</a></li>
             <li><a href="#Elements" class="nav-link">elements</a></li>
             <li><a href="#Operators" class="nav-link">operators</a></li>
-            <li><a href="#" class="nav-link">queries and subqueries</a></li>
+            <li><a href="#Queries_And_Subqueries" class="nav-link">queries and subqueries</a></li>
             <li><a href="#" class="nav-link">data manipulation</a></li>
             <li><a href="#" class="nav-link">resources</a></li>
       </ul>
@@ -138,7 +138,71 @@
         </table>
 
       </section>
-      <section class="main-section">
+      <section class="main-section" id="Queries_And_Subqueries">
+        <header><h2>Queries and Subqueries</h2></header>
+        <p>The most common operation in SQL, the query, makes use of the declarative SELECT statement. SELECT retrieves data from one or more tables, or expressions. Standard SELECT statements have no persistent effects on the database. Some non-standard implementations of SELECT can have persistent effects, such as the SELECT INTO syntax provided in some databases.</p>
+        <p>Queries allow the user to describe desired data, leaving the database management system (DBMS) to carry out planning, optimizing, and performing the physical operations necessary to produce that result as it chooses.</p>
+        <p>A query includes a list of columns to include in the final result, normally immediately following the SELECT keyword. An asterisk ("*") can be used to specify that the query should return all columns of the queried tables. SELECT is the most complex statement in SQL, with optional keywords and clauses that include:</p>
+        <ul>
+          <li>The FROM clause, which indicates the table(s) to retrieve data from. The FROM clause can include optional JOIN subclauses to specify the rules for joining tables.</li>
+          <li>The WHERE clause includes a comparison predicate, which restricts the rows returned by the query. The WHERE clause eliminates all rows from the result set where the comparison predicate does not evaluate to True.</li>
+          <li>The GROUP BY clause projects rows having common values into a smaller set of rows. GROUP BY is often used in conjunction with SQL aggregation functions or to eliminate duplicate rows from a result set. The WHERE clause is applied before the GROUP BY clause.</li>
+          <li>The HAVING clause includes a predicate used to filter rows resulting from the GROUP BY clause. Because it acts on the results of the GROUP BY clause, aggregation functions can be used in the HAVING clause predicate.</li>
+          <li>The ORDER BY clause identifies which column[s] to use to sort the resulting data, and in which direction to sort them (ascending or descending). Without an ORDER BY clause, the order of rows returned by an SQL query is undefined.</li>
+          <li>The DISTINCT keyword eliminates duplicate data.</li>
+          <li>The LIMIT clause specifies the number of records to return. Note that this clause is not supported by all SQL databases.</li>
+        </ul>
+        <p>The following example of a SELECT query returns a list of expensive books. The query retrieves all rows from the Book table in which the price column contains a value greater than 100.00. The result is sorted in ascending order by title. The asterisk (*) in the select list indicates that all columns of the Book table should be included in the result set.</p>
+        <code>SELECT *<br>
+          FROM  Book<br>
+          WHERE price > 100.00<br>
+          ORDER BY title;
+        </code>
+        <p>The example below demonstrates a query of multiple tables, grouping, and aggregation, by returning a list of books and the number of authors associated with each book.</p>
+        <code>SELECT Book.title AS Title,<br>
+          count(*) AS Authors<br>
+          FROM  Book<br>
+          JOIN  Book_author<br>
+          ON  Book.isbn = Book_author.isbn<br>
+          GROUP BY Book.title;
+        </code>
+        <p>Example output might resemble the following:</p>
+        <code>Title                  Authors<br>
+            ---------------------- -------<br>
+            SQL Examples and Guide 4<br>
+            The Joy of SQL         1<br>
+            An Introduction to SQL 2<br>
+            Pitfalls of SQL        1
+        </code>
+        <p>Under the precondition that isbn is the only common column name of the two tables and that a column named title only exists in the Book table, one could re-write the query above in the following form:</p>
+        <code>SELECT title,<br>
+          count(*) AS Authors<br>
+          FROM  Book<br>
+          NATURAL JOIN Book_author<br>
+          GROUP BY title;
+        </code>
+        <p>However, manyvendors either do not support this approach, or require certain column-naming conventions for natural joins to work effectively.</p>
+        <p>SQL includes operators and functions for calculating values on stored values. SQL allows the use of expressions in the select list to project data, as in the following example, which returns a list of books that cost more than 100.00 with an additional sales_tax column containing a sales tax figure calculated at 6% of the price.</p>
+        <code>SELECT isbn,<br>
+          title,<br>
+          price,<br>
+          price * 0.06 AS sales_tax<br>
+          FROM  Book<br>
+          WHERE price > 100.00<br>
+          ORDER BY title;
+        </code>
+        <h3>Subqueries</h3>
+        <p>Queries can be nested so that the results of one query can be used in another query via a relational operator or aggregation function. A nested query is also known as a subquery. While joins and other table operations provide computationally superior (i.e. faster) alternatives in many cases, the use of subqueries introduces a hierarchy in execution that can be useful or necessary. In the following example, the aggregation function AVG receives as input the result of a subquery:</p>
+        <code>SELECT isbn,<br>
+          title,<br>
+          price<br>
+          FROM  Book<br>
+          WHERE price < (SELECT AVG(price) FROM Book)<br>
+          ORDER BY title;
+        </code>
+        <p>a subquery can use values from the outer query, in which case it is known as a correlated subquery.</p>
+        <p>Since 1999 the SQL standard allows WITH clauses for subqueries, i.e. named subqueries, usually called common table expressions (also called subquery factoring). CTEs can also be recursive by referring to themselves; the resulting mechanism allows tree or graph traversals (when represented as relations), and more generally fixpoint computations.</p>
+
 
       </section>
       <section class="main-section">
