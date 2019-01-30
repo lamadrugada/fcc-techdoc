@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', Arial, non-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #D83112;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+code {
+  padding: 0.5rem;
+  margin: 1rem;
+  background-color: #FFC0B5;
+}
