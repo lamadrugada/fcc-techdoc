@@ -139,19 +139,19 @@
       </section>
       <section class="main-section" id="Queries_And_Subqueries">
         <header><h2>Queries and Subqueries</h2></header>
-        <p>The most common operation in SQL, the query, makes use of the declarative SELECT statement. SELECT retrieves data from one or more tables, or expressions. Standard SELECT statements have no persistent effects on the database. Some non-standard implementations of SELECT can have persistent effects, such as the SELECT INTO syntax provided in some databases.</p>
+        <p>The most common operation in SQL, the query, makes use of the declarative <code>SELECT</code> statement. <code>SELECT</code> retrieves data from one or more tables, or expressions. Standard <code>SELECT</code> statements have no persistent effects on the database. Some non-standard implementations of <code>SELECT</code> can have persistent effects, such as the <code>SELECT INTO</code> syntax provided in some databases.</p>
         <p>Queries allow the user to describe desired data, leaving the database management system (DBMS) to carry out planning, optimizing, and performing the physical operations necessary to produce that result as it chooses.</p>
-        <p>A query includes a list of columns to include in the final result, normally immediately following the SELECT keyword. An asterisk ("*") can be used to specify that the query should return all columns of the queried tables. SELECT is the most complex statement in SQL, with optional keywords and clauses that include:</p>
+        <p>A query includes a list of columns to include in the final result, normally immediately following the <code>SELECT</code> keyword. An asterisk ("*") can be used to specify that the query should return all columns of the queried tables. <code>SELECT</code> is the most complex statement in SQL, with optional keywords and clauses that include:</p>
         <ul>
-          <li>The FROM clause, which indicates the table(s) to retrieve data from. The FROM clause can include optional JOIN subclauses to specify the rules for joining tables.</li>
-          <li>The WHERE clause includes a comparison predicate, which restricts the rows returned by the query. The WHERE clause eliminates all rows from the result set where the comparison predicate does not evaluate to True.</li>
-          <li>The GROUP BY clause projects rows having common values into a smaller set of rows. GROUP BY is often used in conjunction with SQL aggregation functions or to eliminate duplicate rows from a result set. The WHERE clause is applied before the GROUP BY clause.</li>
-          <li>The HAVING clause includes a predicate used to filter rows resulting from the GROUP BY clause. Because it acts on the results of the GROUP BY clause, aggregation functions can be used in the HAVING clause predicate.</li>
-          <li>The ORDER BY clause identifies which columns to use to sort the resulting data, and in which direction to sort them (ascending or descending). Without an ORDER BY clause, the order of rows returned by an SQL query is undefined.</li>
-          <li>The DISTINCT keyword eliminates duplicate data.</li>
-          <li>The LIMIT clause specifies the number of records to return. Note that this clause is not supported by all SQL databases.</li>
+          <li>The <code>FROM</code> clause, which indicates the table(s) to retrieve data from. The <code>FROM</code> clause can include optional <code>JOIN</code> subclauses to specify the rules for joining tables.</li>
+          <li>The<code>WHERE</code> clause includes a comparison predicate, which restricts the rows returned by the query. The <code>WHERE</code> clause eliminates all rows from the result set where the comparison predicate does not evaluate to True.</li>
+          <li>The <code>GROUP BY</code> clause projects rows having common values into a smaller set of rows. <code>GROUP BY</code> is often used in conjunction with SQL aggregation functions or to eliminate duplicate rows from a result set. The <code>WHERE</code> clause is applied before the <code>GROUP BY</code> clause.</li>
+          <li>The <code>HAVING</code> clause includes a predicate used to filter rows resulting from the <code>GROUP BY</code/> clause. Because it acts on the results of the <code>GROUP BY</code> clause, aggregation functions can be used in the <code>HAVING</code> clause predicate.</li>
+          <li>The <code>ORDER BY</code> clause identifies which columns to use to sort the resulting data, and in which direction to sort them (ascending or descending). Without an <code>ORDER BY</code> clause, the order of rows returned by an SQL query is undefined.</li>
+          <li>The <code>DISTINCT</code> keyword eliminates duplicate data.</li>
+          <li>The <code>LIMIT</code> clause specifies the number of records to return. Note that this clause is not supported by all SQL databases.</li>
         </ul>
-        <p>The following example of a SELECT query returns a list of expensive books. The query retrieves all rows from the Book table in which the price column contains a value greater than 100.00. The result is sorted in ascending order by title. The asterisk (*) in the select list indicates that all columns of the Book table should be included in the result set.</p>
+        <p>The following example of a <code>SELECT</code> query returns a list of expensive books. The query retrieves all rows from the Book table in which the price column contains a value greater than 100.00. The result is sorted in ascending order by title. The asterisk (*) in the select list indicates that all columns of the Book table should be included in the result set.</p>
         <pre>
           <code>SELECT *
 FROM  Book
@@ -210,31 +210,35 @@ ORDER BY title;</code>
 
       </section>
       <section class="main-section" id="Data_Manipulation">
-        <header><h2>DAta Manipulation</h2></header>
+        <header><h2>Data Manipulation</h2></header>
         <p>The Data Manipulation Language (DML) is the subset of SQL used to add, update and delete data:</p>
         <ul>
           <li>INSERT adds rows (formally tuples) to an existing table, e.g.:</li>
-          <code>INSERT INTO example<br>
-            (column1, column2, column3)<br>
-            VALUES<br>
-            ('test', 'N', NULL);
-          </code>
+          <pre>
+            <code>INSERT INTO example
+(column1, column2, column3)
+VALUES
+('test', 'N', NULL);</code>
+          </pre>
           <li>UPDATE modifies a set of existing table rows, e.g.:</li>
-          <code>UPDATE example<br>
-            SET column1 = 'updated value'<br>
-            WHERE column2 = 'N';
-          </code>
+          <pre>
+            <code>UPDATE example
+SET column1 = 'updated value'
+WHERE column2 = 'N';</code>
+          </pre>
           <li>DELETE removes existing rows from a table, e.g.:</li>
-          <code>DELETE FROM example<br>
-            WHERE column2 = 'N';
-          </code>
+          <pre>
+            <code>DELETE FROM example
+WHERE column2 = 'N';</code>
+          </pre>
           <li>MERGE is used to combine the data of multiple tables. It combines the INSERT and UPDATE elements. It is defined in the SQL:2003 standard; prior to that, some databases provided similar functionality via different syntax, sometimes called "upsert".</li>
-          <code>MERGE INTO table_name USING table_reference ON (condition)<br>
-            WHEN MATCHED THEN<br>
-            UPDATE SET column1 = value1 [, column2 = value2 ...]<br>
-            WHEN NOT MATCHED THEN<br>
-            INSERT (column1 [, column2 ...]) VALUES (value1 [, value2 ...])
-          </code>
+          <pre>
+            <code>MERGE INTO table_name USING table_reference ON (condition)
+WHEN MATCHED THEN
+UPDATE SET column1 = value1 [, column2 = value2 ...]
+THEN NOT MATCHED THEN
+INSERT (column1 [, column2 ...]) VALUES (value1 [, value2 ...])</code>
+         </pre>
         </ul>
 
 
