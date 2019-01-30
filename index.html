@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="../../../Templatki/reset.css">
+    <!--<link rel="stylesheet" href="../../../Templatki/reset.css">-->
     <link rel="stylesheet" href="./style.css">
 
     <title>TechDoc</title>
@@ -16,22 +16,71 @@
 
 
   <body>
-    <header>
-      <h1>TechDoc JS</h1>
-    </header>
-    <menu>
+    <nav id="navbar">
+      <header>
+        <h1>TechDoc JS</h1>
+      </header>
       <ul>
-        <li>data types</li>
-        <li>elements</li>
-        <li>operators</li>
-        <li>queries</li>
-        <li>subqueries</li>
-        <li>data creation</li>
-        <li>data manipulation</li>
+            <li><a href="#" class="nav-link">data types</a></li>
+            <li><a href="#" class="nav-link">elements</a></li>
+            <li><a href="#" class="nav-link">operators</a></li>
+            <li><a href="#" class="nav-link">queries and subqueries</a></li>
+            <li><a href="#" class="nav-link">data manipulation</a></li>
+            <li><a href="#" class="nav-link">resources</a></li>
       </ul>
-    <menu>
+    </nav>
 
-    <main>
+    <main id="main-doc">
+      <section class="main-section" id="Data_Types">
+        <header><h2>Data Types</h2></header>
+        <p>Each column in an SQL table declares the type(s) that column may contain. ANSI SQL includes the following data types.</p>
+        <h3>Character strings and national character strings</h3>
+        <ul>
+          <li>CHARACTER(n) (or CHAR(n)): fixed-width n-character string, padded with spaces as needed</li>
+          <li>CHARACTER VARYING(n) (or VARCHAR(n)): variable-width string with a maximum size of n characters</li>
+          <li>CHARACTER LARGE OBJECT(n [ K | M | G | T ]) (or CLOB(n [ K | M | G | T ])): character large object with a maximum size of n [ K | M | G | T ] characters</li>
+          <li>NATIONAL CHARACTER(n) (or NCHAR(n)): fixed width string supporting an international character set</li>
+          <li>NATIONAL CHARACTER VARYING(n) (or NVARCHAR(n)): variable-width NCHAR string</li>
+          <li>NATIONAL CHARACTER LARGE OBJECT(n [ K | M | G | T ]) (or NCLOB(n [ K | M | G | T ])): national character large object with a maximum size of n [ K | M | G | T ] characters</li>
+        </ul>
+        <h3>Binary</h3>
+        <ul>
+          <li>BINARY(n): Fixed length binary string, maximum length n.</li>
+          <li>BINARY VARYING(n) (or VARBINARY(n)): Variable length binary string, maximum length n.</li>
+          <li>BINARY LARGE OBJECT(n [ K | M | G | T ]) (or BLOB(n [ K | M | G | T ])): binary large object with a maximum length n [ K | M | G | T ].</li>
+        </ul>
+        <h3>Boolean</h3>
+        <p>The BOOLEAN data type can store the values TRUE and FALSE.</p>
+        <h3>Numerical</h3>
+        <ul>
+          <li>INTEGER (or INT), SMALLINT and BIGINT</li>
+          <li>FLOAT, REAL and DOUBLE PRECISION</li>
+          <li>NUMERIC(precision, scale) or DECIMAL(precision, scale)</li>
+          <li>DECFLOAT(precision)</li>
+        </ul>
+
+      </section>
+      <section class="main-section">
+
+      </section>
+      <section class="main-section">
+
+      </section>
+      <section class="main-section">
+
+      </section>
+      <section class="main-section">
+
+      </section>
+      <section class="main-section">
+
+      </section>
+      <section class="main-section">
+
+      </section>
+      <section class="main-section">
+
+      </section>
 
     </main>
 
