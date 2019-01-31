@@ -6,6 +6,7 @@
 
     <!--<link rel="stylesheet" href="../../../Templatki/reset.css">-->
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
     <title>TechDoc</title>
 
@@ -17,11 +18,16 @@
 
   <body>
     <div class="wrapper">
+
     <nav id="navbar">
 
       <header>
         <h1>SQL TechDoc</h1>
       </header>
+      <input type="text" id="searcher" name="searcher" placeholder="Search...">
+      <button type="submit" id="searchbutton" name="searchbutton" class="searchButton">
+        <i class="fa fa-search"></i>
+      </button>
       <ul>
         <li><a href="#Introduction" class="nav-link">Introduction</a></li>
             <li><a href="#Data_Types" class="nav-link">Data Types</a></li>
@@ -33,7 +39,7 @@
       </ul>
 
     </nav>
-
+  
     <main id="main-doc">
       <section class="main-section" id="Introduction">
         <header><h2>Introduction</h2></header>

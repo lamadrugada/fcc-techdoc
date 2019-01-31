@@ -69,6 +69,7 @@ code {
 
 pre code {
   display: block;
+  border-radius: 10px;
   font-family: 'Source Code Pro', Courier, monospace;
   padding: 0.5rem;
   margin: 1rem;
@@ -80,6 +81,7 @@ pre code {
 .wrapper {
   display: flex;
   flex-flow: row wrap;
+
 }
 
 /*------NAVBAR------*/
@@ -107,13 +109,40 @@ nav a:hover {
   background-color: #21272A;
 }
 
- nav ul {
+input {
+  border: 5px solid #fff;
+  width: 60%;
+  font-family: 'Open Sans', Arial, non-serif;
+  color: #21272A;
+  height: 2.5rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  margin: 1rem 0 2rem 2rem;
+}
+
+input:focus, button:hover {
+  border-color: #21272A;
+}
+
+button {
+  border: 5px solid #fff;
+  border-radius: 10px;
+  color: #21272A;
+  font-size: 1rem;
+  height: 2.5rem;
+  background-color: #fff;
+  margin: 1rem 0 2rem 0rem;
+}
+
+
+
+nav ul {
   width: 100%;
    list-style-type: none;
    padding: 0;
    border-bottom: 1px #FFC0B5 solid;
 
- }
+}
 
 main {
   width: 80%;
