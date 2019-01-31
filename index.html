@@ -18,11 +18,12 @@
   <body>
     <div class="wrapper">
     <nav id="navbar">
-      
+
       <header>
         <h1>SQL TechDoc</h1>
       </header>
       <ul>
+        <li><a href="#Introduction" class="nav-link">Introduction</a></li>
             <li><a href="#Data_Types" class="nav-link">Data Types</a></li>
             <li><a href="#Elements" class="nav-link">Elements</a></li>
             <li><a href="#Operators" class="nav-link">Operators</a></li>
@@ -34,32 +35,36 @@
     </nav>
 
     <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header><h2>Introduction</h2></header>
+        <p>SQL (Structured Query Language) is a domain-specific language used in programming and designed for managing data held in a relational database management system (RDBMS), or for stream processing in a relational data stream management system (RDSMS). It is particularly useful in handling structured data where there are relations between different entities/variables of the data. SQL offers two main advantages over older read/write APIs like ISAM or VSAM: first, it introduced the concept of accessing many records with one single command; and second, it eliminates the need to specify how to reach a record, e.g. with or without an index.</p>
+        <p>SQL was initially developed at IBM by Donald D. Chamberlin and Raymond F. Boyce after learning about the relational model from Ted Codd in the early 1970s. This version, initially called SEQUEL (Structured English Query Language), was designed to manipulate and retrieve data stored in IBM's original quasi-relational database management system, System R, which a group at IBM San Jose Research Laboratory had developed during the 1970s.</p>
+      </section>
       <section class="main-section" id="Data_Types">
         <header><h2>Data Types</h2></header>
         <p>Each column in an SQL table declares the type(s) that column may contain. ANSI SQL includes the following data types.</p>
         <h3>Character strings and national character strings</h3>
         <ul>
-          <li>CHARACTER(n) (or CHAR(n)): fixed-width n-character string, padded with spaces as needed</li>
-          <li>CHARACTER VARYING(n) (or VARCHAR(n)): variable-width string with a maximum size of n characters</li>
-          <li>CHARACTER LARGE OBJECT(n [ K | M | G | T ]) (or CLOB(n [ K | M | G | T ])): character large object with a maximum size of n [ K | M | G | T ] characters</li>
-          <li>NATIONAL CHARACTER(n) (or NCHAR(n)): fixed width string supporting an international character set</li>
-          <li>NATIONAL CHARACTER VARYING(n) (or NVARCHAR(n)): variable-width NCHAR string</li>
-          <li>NATIONAL CHARACTER LARGE OBJECT(n [ K | M | G | T ]) (or NCLOB(n [ K | M | G | T ])): national character large object with a maximum size of n [ K | M | G | T ] characters</li>
+          <li><code>CHARACTER(n)</code> (or <code>CHAR(n)</code>: fixed-width n-character string, padded with spaces as needed</li>
+          <li><code>CHARACTER VARYING(n)</code> (or <code>VARCHAR(n)</code>): variable-width string with a maximum size of n characters</li>
+          <li><code>NATIONAL CHARACTER(n)</code> (or <code>NCHAR(n)</code>): fixed width string supporting an international character set</li>
+          <li><code>NATIONAL CHARACTER VARYING(n)</code> (or <code>NVARCHAR(n)</code>): variable-width <code>NCHAR</code> string</li>
+          <li><code>NATIONAL CHARACTER LARGE OBJECT(n [ K | M | G | T ])</code> (or <code>NCLOB(n [ K | M | G | T ]</code>)): national character large object with a maximum size of n [ K | M | G | T ] characters</li>
         </ul>
         <h3>Binary</h3>
         <ul>
-          <li>BINARY(n): Fixed length binary string, maximum length n.</li>
-          <li>BINARY VARYING(n) (or VARBINARY(n)): Variable length binary string, maximum length n.</li>
-          <li>BINARY LARGE OBJECT(n [ K | M | G | T ]) (or BLOB(n [ K | M | G | T ])): binary large object with a maximum length n [ K | M | G | T ].</li>
+          <li><code>BINARY(n)</code>: Fixed length binary string, maximum length n.</li>
+          <li><code>BINARY VARYING(n)</code> (or <code>VARBINARY(n)</code>): Variable length binary string, maximum length n.</li>
+          <li><code>BINARY LARGE OBJECT(n [ K | M | G | T ])</code> (or <code>BLOB(n [ K | M | G | T ])</code>): binary large object with a maximum length n [ K | M | G | T ].</li>
         </ul>
         <h3>Boolean</h3>
-        <p>The BOOLEAN data type can store the values TRUE and FALSE.</p>
+        <p>The <code>BOOLEAN</code> data type can store the values <code>TRUE</code> and <code>FALSE</code>.</p>
         <h3>Numerical</h3>
         <ul>
-          <li>INTEGER (or INT), SMALLINT and BIGINT</li>
-          <li>FLOAT, REAL and DOUBLE PRECISION</li>
-          <li>NUMERIC(precision, scale) or DECIMAL(precision, scale)</li>
-          <li>DECFLOAT(precision)</li>
+          <li><code>INTEGER (or INT), SMALLINT and BIGINT</code></li>
+          <li><code>FLOAT, REAL and DOUBLE PRECISION</code></li>
+          <li><code>NUMERIC(precision, scale)</code> or <code>DECIMAL(precision, scale)</code></li>
+          <li><code>DECFLOAT(precision)</code></li>
         </ul>
       </section>
       <section class="main-section" id="Elements">
