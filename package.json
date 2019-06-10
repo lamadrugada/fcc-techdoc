@@ -1,0 +1,23 @@
+{
+  "name": "fcc-techdoc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "dependencies": {
+    "mark.js": "^8.11.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lamadrugada/fcc-techdoc.git"
+  },
+  "author": "la madrugada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lamadrugada/fcc-techdoc/issues"
+  },
+  "homepage": "https://github.com/lamadrugada/fcc-techdoc#readme"
+}
