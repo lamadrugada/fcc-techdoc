@@ -187,22 +187,17 @@ th {
     margin-right: 0.5rem;
     line-height: 3.2rem;
   }
+
+  nav {
+    line-height: 1.2rem;
+  }
+  nav a {
+    padding: 0.5rem;
+  }
 }
 
 @media (max-width: 1020px) {
-  .wrapper {
-    flex-flow: column wrap;
-  }
-
-  nav,
-  main,
-  table {
-    width: 100%;
-  }
-
-  nav ul {
-    display: none;
-  }
+  
 }
 
 
@@ -225,9 +220,23 @@ th {
     margin-bottom: 0;
   }
 
-    nav {
-    padding: 0.5rem;
+  .wrapper {
+    flex-flow: column wrap;
+  }
 
+  nav,
+  main,
+  table {
+    width: 100%;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  nav {
+    padding: 0.5rem;
+    line-height: 1rem;
   }
 
   nav a {
