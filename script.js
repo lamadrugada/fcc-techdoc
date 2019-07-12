@@ -1,2 +1,4 @@
 let context;
-let instance = new msWriteProfilerMark(context);
+let instance = new Mark(context);
+
+instance.mark();
