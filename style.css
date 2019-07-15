@@ -94,12 +94,18 @@ pre code {
 
 /*------NAVBAR------*/
 
-nav {
-  background: #D83112;
+.navwrapper {
+  background-color: #D83112;
   margin: 0;
   padding: 2rem 0 2rem 0;
-  width: 20%;
+  width: 280px;
   line-height: 2rem;
+  
+}
+nav {
+  position: fixed;
+  width: 280px;
+  background-color: #D83112;
 }
 
 .searchwrapper {
@@ -152,13 +158,13 @@ button {
 
 nav ul {
   width: 100%;
-   list-style-type: none;
-   padding: 0;
-   border-bottom: 1px #FFC0B5 solid;
+  list-style-type: none;
+  padding: 0;
+  border-bottom: 1px #FFC0B5 solid;
 }
 
 main {
-  width: 80%;
+  width: calc(100% - 280px);
   padding: 2rem 3rem;
 }
 
@@ -181,7 +187,7 @@ th {
 
 /*--------------------------------------------MEDIA QUERIES----------------------------------*/
 
-@media (max-width: 1500px) {
+@media (max-width: 1100px) {
   h1 {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
@@ -196,9 +202,7 @@ th {
   }
 }
 
-@media (max-width: 1020px) {
-  
-}
+
 
 
 @media (max-width: 430px) {
