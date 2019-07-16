@@ -1,3 +1,9 @@
+/*TO DO:
+- zmienne dla kolorków
+- zmienne dla czcionek
+
+*/
+
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
@@ -31,7 +37,7 @@ section ul {
 }
 
 section li::before {
-  content: "•";
+  content: '•';
   color: #D83112;
   display: inline-block;
   width: 1rem;
@@ -58,8 +64,8 @@ a {
 }
 
 a:hover {
-  color: #fff;
-  background-color: #D83112;
+  color: #FFC0B5;
+  background-color: #21272A;
 
 }
 
@@ -183,6 +189,11 @@ th, td {
 th {
   background-color: #FFC0B5;
   font-weight: bold;
+}
+
+mark {
+  border-bottom: 2px #D83112 solid;
+  background: #FFC0B5;
 }
 
 /*--------------------------------------------MEDIA QUERIES----------------------------------*/
