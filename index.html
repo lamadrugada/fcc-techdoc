@@ -1,7 +1,6 @@
 <!--TO DO
 - arrows for hamburger menu
 - hamburger menu itself
-- searcher
 -->
 
 <!DOCTYPE html>
@@ -10,7 +9,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--<link rel="stylesheet" href="../../../Templatki/reset.css">-->
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
@@ -25,7 +23,6 @@
 
   <body>
     <div class="wrapper">
-
       <div class="navwrapper">
         <nav id="navbar">
           <header>
@@ -39,52 +36,51 @@
           </div>
           <ul>
             <li><a href="#Introduction" class="nav-link">Introduction</a></li>
-                <li><a href="#Data_Types" class="nav-link">Data Types</a></li>
-                <li><a href="#Elements" class="nav-link">Elements</a></li>
-                <li><a href="#Operators" class="nav-link">Operators</a></li>
-                <li><a href="#Queries_And_Subqueries" class="nav-link">Queries and subqueries</a></li>
-                <li><a href="#Data_Manipulation" class="nav-link">Data Manipulation</a></li>
-                <li><a href="#Resources" class="nav-link">Resources</a></li>
+            <li><a href="#Data_Types" class="nav-link">Data Types</a></li>
+            <li><a href="#Elements" class="nav-link">Elements</a></li>
+            <li><a href="#Operators" class="nav-link">Operators</a></li>
+            <li><a href="#Queries_And_Subqueries" class="nav-link">Queries and subqueries</a></li>
+            <li><a href="#Data_Manipulation" class="nav-link">Data Manipulation</a></li>
+            <li><a href="#Resources" class="nav-link">Resources</a></li>
           </ul>
         </nav>
       </div>
-
-    <main id="main-doc">
-      <section class="main-section" id="Introduction">
-        <header><h2>Introduction</h2></header>
-        <p>SQL (Structured Query Language) is a domain-specific language used in programming and designed for managing data held in a relational database management system (RDBMS), or for stream processing in a relational data stream management system (RDSMS). It is particularly useful in handling structured data where there are relations between different entities/variables of the data. SQL offers two main advantages over older read/write APIs like ISAM or VSAM: first, it introduced the concept of accessing many records with one single command; and second, it eliminates the need to specify how to reach a record, e.g. with or without an index.</p>
-        <p>SQL was initially developed at IBM by Donald D. Chamberlin and Raymond F. Boyce after learning about the relational model from Ted Codd in the early 1970s. This version, initially called SEQUEL (Structured English Query Language), was designed to manipulate and retrieve data stored in IBM's original quasi-relational database management system, System R, which a group at IBM San Jose Research Laboratory had developed during the 1970s.</p>
-      </section>
-      <section class="main-section" id="Data_Types">
-        <header><h2>Data Types</h2></header>
-        <p>Each column in an SQL table declares the type(s) that column may contain. ANSI SQL includes the following data types.</p>
-        <h3>Character strings and national character strings</h3>
-        <ul>
-          <li><code>CHARACTER(n)</code> (or <code>CHAR(n)</code>: fixed-width n-character string, padded with spaces as needed</li>
-          <li><code>CHARACTER VARYING(n)</code> (or <code>VARCHAR(n)</code>): variable-width string with a maximum size of n characters</li>
-          <li><code>NATIONAL CHARACTER(n)</code> (or <code>NCHAR(n)</code>): fixed width string supporting an international character set</li>
-          <li><code>NATIONAL CHARACTER VARYING(n)</code> (or <code>NVARCHAR(n)</code>): variable-width <code>NCHAR</code> string</li>
-          <li><code>NATIONAL CHARACTER LARGE OBJECT(n [ K | M | G | T ])</code> (or <code>NCLOB(n [ K | M | G | T ]</code>)): national character large object with a maximum size of n [ K | M | G | T ] characters</li>
-        </ul>
-        <h3>Binary</h3>
-        <ul>
-          <li><code>BINARY(n)</code>: Fixed length binary string, maximum length n.</li>
-          <li><code>BINARY VARYING(n)</code> (or <code>VARBINARY(n)</code>): Variable length binary string, maximum length n.</li>
-          <li><code>BINARY LARGE OBJECT(n [ K | M | G | T ])</code> (or <code>BLOB(n [ K | M | G | T ])</code>): binary large object with a maximum length n [ K | M | G | T ].</li>
-        </ul>
-        <h3>Boolean</h3>
-        <p>The <code>BOOLEAN</code> data type can store the values <code>TRUE</code> and <code>FALSE</code>.</p>
-        <h3>Numerical</h3>
-        <ul>
-          <li><code>INTEGER (or INT), SMALLINT and BIGINT</code></li>
-          <li><code>FLOAT, REAL and DOUBLE PRECISION</code></li>
-          <li><code>NUMERIC(precision, scale)</code> or <code>DECIMAL(precision, scale)</code></li>
-          <li><code>DECFLOAT(precision)</code></li>
-        </ul>
-      </section>
-      <section class="main-section" id="Elements">
-        <header><h2>Elements</h2></header>
-        <p>The SQL language is subdivided into several language elements, including:</p>
+      <main id="main-doc">
+        <section class="main-section" id="Introduction">
+          <header><h2>Introduction</h2></header>
+          <p>SQL (Structured Query Language) is a domain-specific language used in programming and designed for managing data held in a relational database management system (RDBMS), or for stream processing in a relational data stream management system (RDSMS). It is particularly useful in handling structured data where there are relations between different entities/variables of the data. SQL offers two main advantages over older read/write APIs like ISAM or VSAM: first, it introduced the concept of accessing many records with one single command; and second, it eliminates the need to specify how to reach a record, e.g. with or without an index.</p>
+          <p>SQL was initially developed at IBM by Donald D. Chamberlin and Raymond F. Boyce after learning about the relational model from Ted Codd in the early 1970s. This version, initially called SEQUEL (Structured English Query Language), was designed to manipulate and retrieve data stored in IBM's original quasi-relational database management system, System R, which a group at IBM San Jose Research Laboratory had developed during the 1970s.</p>
+        </section>
+        <section class="main-section" id="Data_Types">
+          <header><h2>Data Types</h2></header>
+          <p>Each column in an SQL table declares the type(s) that column may contain. ANSI SQL includes the following data types.</p>
+          <h3>Character strings and national character strings</h3>
+          <ul>
+            <li><code>CHARACTER(n)</code> (or <code>CHAR(n)</code>: fixed-width n-character string, padded with spaces as needed</li>
+            <li><code>CHARACTER VARYING(n)</code> (or <code>VARCHAR(n)</code>): variable-width string with a maximum size of n characters</li>
+            <li><code>NATIONAL CHARACTER(n)</code> (or <code>NCHAR(n)</code>): fixed width string supporting an international character set</li>
+            <li><code>NATIONAL CHARACTER VARYING(n)</code> (or <code>NVARCHAR(n)</code>): variable-width <code>NCHAR</code> string</li>
+            <li><code>NATIONAL CHARACTER LARGE OBJECT(n [ K | M | G | T ])</code> (or <code>NCLOB(n [ K | M | G | T ]</code>)): national character large object with a maximum size of n [ K | M | G | T ] characters</li>
+          </ul>
+          <h3>Binary</h3>
+          <ul>
+            <li><code>BINARY(n)</code>: Fixed length binary string, maximum length n.</li>
+            <li><code>BINARY VARYING(n)</code> (or <code>VARBINARY(n)</code>): Variable length binary string, maximum length n.</li>
+            <li><code>BINARY LARGE OBJECT(n [ K | M | G | T ])</code> (or <code>BLOB(n [ K | M | G | T ])</code>): binary large object with a maximum length n [ K | M | G | T ].</li>
+          </ul>
+          <h3>Boolean</h3>
+          <p>The <code>BOOLEAN</code> data type can store the values <code>TRUE</code> and <code>FALSE</code>.</p>
+          <h3>Numerical</h3>
+          <ul>
+            <li><code>INTEGER (or INT), SMALLINT and BIGINT</code></li>
+            <li><code>FLOAT, REAL and DOUBLE PRECISION</code></li>
+            <li><code>NUMERIC(precision, scale)</code> or <code>DECIMAL(precision, scale)</code></li>
+            <li><code>DECFLOAT(precision)</code></li>
+          </ul>
+        </section>
+        <section class="main-section" id="Elements">
+          <header><h2>Elements</h2></header>
+          <p>The SQL language is subdivided into several language elements, including:</p>
           <ul>
             <li>Clauses, which are constituent components of statements and queries. (In some cases, these are optional.)</li>
             <li>Expressions, which can produce either scalar values, or tables consisting of columns and rows of data</li>
@@ -93,194 +89,189 @@
             <li>Statements, which may have a persistent effect on schemata and data, or may control transactions, program flow, connections, sessions, or diagnostics. SQL statements also include the semicolon (";") statement terminator. Though not required on every platform, it is defined as a standard part of the SQL grammar.</li>
             <li>Insignificant whitespace is generally ignored in SQL statements and queries, making it easier to format SQL code for readability.</li>
           </ul>
-      </section>
-      <section class="main-section" id="Operators">
-        <header><h2>Operators</h2></header>
-        <table>
-          <thead>
-            <tr>
-              <th>Operator</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>=</td>
-              <td>Equal to</td>
-            </tr>
-            <tr>
-              <td>!=</td>
-              <td>Not equal to</td>
-            </tr>
-            <tr>
-              <td>></td>
-              <td>Greater than</td>
-            </tr>
-            <tr>
-              <td><</td>
-              <td>Less than</td>
-            </tr>
-            <tr>
-              <td>>=</td>
-              <td>Greater than or equal</td>
-            </tr>
-            <tr>
-              <td><=</td>
-              <td>Less than or equal</td>
-            </tr>
-            <tr>
-              <td>BETWEEN</td>
-              <td>Between an inclusive range</td>
-            </tr>
-            <tr>
-              <td>LIKE</td>
-              <td>Begins with/contains a character pattern</td>
-            </tr>
-            <tr>
-              <td>[NOT] IN</td>
-              <td>Equal to one of multiple possible values </td>
-            </tr>
-            <tr>
-              <td>IS [NOT] NULL</td>
-              <td>Compare to null (missing data) </td>
-            </tr>
-            <tr>
-              <td>IS [NOT] TRUE/FALSE</td>
-              <td>Boolean truth value test </td>
-            </tr>
-            <tr>
-              <td>IS NOT DISTINCT FROM</td>
-              <td>Is equal to value or both are nulls (missing data)</td>
-            </tr>
-            <tr>
-              <td>AS</td>
-              <td> 	Used to change a column name when viewing results </td>
-            </tr>
-          </tbody>
-        </table>
+        </section>
+        <section class="main-section" id="Operators">
+          <header><h2>Operators</h2></header>
+          <table>
+            <thead>
+              <tr>
+                <th>Operator</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>=</td>
+                <td>Equal to</td>
+              </tr>
+              <tr>
+                <td>!=</td>
+                <td>Not equal to</td>
+              </tr>
+              <tr>
+                <td>></td>
+                <td>Greater than</td>
+              </tr>
+              <tr>
+                <td><</td>
+                <td>Less than</td>
+              </tr>
+              <tr>
+                <td>>=</td>
+                <td>Greater than or equal</td>
+              </tr>
+              <tr>
+                <td><=</td>
+                <td>Less than or equal</td>
+              </tr>
+              <tr>
+                <td>BETWEEN</td>
+                <td>Between an inclusive range</td>
+              </tr>
+              <tr>
+                <td>LIKE</td>
+                <td>Begins with/contains a character pattern</td>
+              </tr>
+              <tr>
+                <td>[NOT] IN</td>
+                <td>Equal to one of multiple possible values </td>
+              </tr>
+              <tr>
+                <td>IS [NOT] NULL</td>
+                <td>Compare to null (missing data) </td>
+              </tr>
+              <tr>
+                <td>IS [NOT] TRUE/FALSE</td>
+                <td>Boolean truth value test </td>
+              </tr>
+              <tr>
+                <td>IS NOT DISTINCT FROM</td>
+                <td>Is equal to value or both are nulls (missing data)</td>
+              </tr>
+              <tr>
+                <td>AS</td>
+                <td> 	Used to change a column name when viewing results </td>
+              </tr>
+            </tbody>
+          </table>
 
-      </section>
-      <section class="main-section" id="Queries_And_Subqueries">
-        <header><h2>Queries and Subqueries</h2></header>
-        <p>The most common operation in SQL, the query, makes use of the declarative <code>SELECT</code> statement. <code>SELECT</code> retrieves data from one or more tables, or expressions. Standard <code>SELECT</code> statements have no persistent effects on the database. Some non-standard implementations of <code>SELECT</code> can have persistent effects, such as the <code>SELECT INTO</code> syntax provided in some databases.</p>
-        <p>Queries allow the user to describe desired data, leaving the database management system (DBMS) to carry out planning, optimizing, and performing the physical operations necessary to produce that result as it chooses.</p>
-        <p>A query includes a list of columns to include in the final result, normally immediately following the <code>SELECT</code> keyword. An asterisk ("*") can be used to specify that the query should return all columns of the queried tables. <code>SELECT</code> is the most complex statement in SQL, with optional keywords and clauses that include:</p>
-        <ul>
-          <li>The <code>FROM</code> clause, which indicates the table(s) to retrieve data from. The <code>FROM</code> clause can include optional <code>JOIN</code> subclauses to specify the rules for joining tables.</li>
-          <li>The<code>WHERE</code> clause includes a comparison predicate, which restricts the rows returned by the query. The <code>WHERE</code> clause eliminates all rows from the result set where the comparison predicate does not evaluate to True.</li>
-          <li>The <code>GROUP BY</code> clause projects rows having common values into a smaller set of rows. <code>GROUP BY</code> is often used in conjunction with SQL aggregation functions or to eliminate duplicate rows from a result set. The <code>WHERE</code> clause is applied before the <code>GROUP BY</code> clause.</li>
-          <li>The <code>HAVING</code> clause includes a predicate used to filter rows resulting from the <code>GROUP BY</code/> clause. Because it acts on the results of the <code>GROUP BY</code> clause, aggregation functions can be used in the <code>HAVING</code> clause predicate.</li>
-          <li>The <code>ORDER BY</code> clause identifies which columns to use to sort the resulting data, and in which direction to sort them (ascending or descending). Without an <code>ORDER BY</code> clause, the order of rows returned by an SQL query is undefined.</li>
-          <li>The <code>DISTINCT</code> keyword eliminates duplicate data.</li>
-          <li>The <code>LIMIT</code> clause specifies the number of records to return. Note that this clause is not supported by all SQL databases.</li>
-        </ul>
-        <p>The following example of a <code>SELECT</code> query returns a list of expensive books. The query retrieves all rows from the Book table in which the price column contains a value greater than 100.00. The result is sorted in ascending order by title. The asterisk (*) in the select list indicates that all columns of the Book table should be included in the result set.</p>
-        <pre>
-          <code>SELECT *
-FROM  Book
-WHERE price > 100.00
-ORDER BY title;</code>
-        </pre>
-        <p>The example below demonstrates a query of multiple tables, grouping, and aggregation, by returning a list of books and the number of authors associated with each book.</p>
-        <pre>
-          <code>SELECT Book.title AS Title,
-FROM  Book
-JOIN  Book_author
-ON  Book.isbn = Book_author.isbn
-GROUP BY Book.title;</code>
-        </pre>
-        <p>Example output might resemble the following:</p>
-        <pre>
-          <code>Title                  Authors
----------------------- -------
-SQL Examples and Guide 4
-The Joy of SQL         1
-An Introduction to SQL 2
-Pitfalls of SQL        1</code>
-      </pre>
-        <p>Under the precondition that isbn is the only common column name of the two tables and that a column named title only exists in the Book table, one could re-write the query above in the following form:</p>
-        <pre>
-          <code>SELECT title,
-count(*) AS Authors
-FROM  Book
-NATURAL JOIN Book_author
-GROUP BY title;</code>
-        </pre>
-        <p>However, manyvendors either do not support this approach, or require certain column-naming conventions for natural joins to work effectively.</p>
-        <p>SQL includes operators and functions for calculating values on stored values. SQL allows the use of expressions in the select list to project data, as in the following example, which returns a list of books that cost more than 100.00 with an additional sales_tax column containing a sales tax figure calculated at 6% of the price.</p>
-        <pre>
-          <code>SELECT isbn,
-title,
-price,
-price * 0.06 AS sales_tax
-FROM  Book
-WHERE price > 100.00
-ORDER BY title;</code>
-        </pre>
-        <h3>Subqueries</h3>
-        <p>Queries can be nested so that the results of one query can be used in another query via a relational operator or aggregation function. A nested query is also known as a subquery. While joins and other table operations provide computationally superior (i.e. faster) alternatives in many cases, the use of subqueries introduces a hierarchy in execution that can be useful or necessary. In the following example, the aggregation function AVG receives as input the result of a subquery:</p>
-        <pre>
-          <code>SELECT isbn,
-title,
-price
-FROM  Book
-WHERE price < (SELECT AVG(price) FROM Book)
-ORDER BY title;</code>
-        </pre>
-        <p>a subquery can use values from the outer query, in which case it is known as a correlated subquery.</p>
-        <p>Since 1999 the SQL standard allows WITH clauses for subqueries, i.e. named subqueries, usually called common table expressions (also called subquery factoring). CTEs can also be recursive by referring to themselves; the resulting mechanism allows tree or graph traversals (when represented as relations), and more generally fixpoint computations.</p>
-
-
-      </section>
-      <section class="main-section" id="Data_Manipulation">
-        <header><h2>Data Manipulation</h2></header>
-        <p>The Data Manipulation Language (DML) is the subset of SQL used to add, update and delete data:</p>
-        <ul>
-          <li>INSERT adds rows (formally tuples) to an existing table, e.g.:</li>
+        </section>
+        <section class="main-section" id="Queries_And_Subqueries">
+          <header><h2>Queries and Subqueries</h2></header>
+          <p>The most common operation in SQL, the query, makes use of the declarative <code>SELECT</code> statement. <code>SELECT</code> retrieves data from one or more tables, or expressions. Standard <code>SELECT</code> statements have no persistent effects on the database. Some non-standard implementations of <code>SELECT</code> can have persistent effects, such as the <code>SELECT INTO</code> syntax provided in some databases.</p>
+          <p>Queries allow the user to describe desired data, leaving the database management system (DBMS) to carry out planning, optimizing, and performing the physical operations necessary to produce that result as it chooses.</p>
+          <p>A query includes a list of columns to include in the final result, normally immediately following the <code>SELECT</code> keyword. An asterisk ("*") can be used to specify that the query should return all columns of the queried tables. <code>SELECT</code> is the most complex statement in SQL, with optional keywords and clauses that include:</p>
+          <ul>
+            <li>The <code>FROM</code> clause, which indicates the table(s) to retrieve data from. The <code>FROM</code> clause can include optional <code>JOIN</code> subclauses to specify the rules for joining tables.</li>
+            <li>The<code>WHERE</code> clause includes a comparison predicate, which restricts the rows returned by the query. The <code>WHERE</code> clause eliminates all rows from the result set where the comparison predicate does not evaluate to True.</li>
+            <li>The <code>GROUP BY</code> clause projects rows having common values into a smaller set of rows. <code>GROUP BY</code> is often used in conjunction with SQL aggregation functions or to eliminate duplicate rows from a result set. The <code>WHERE</code> clause is applied before the <code>GROUP BY</code> clause.</li>
+            <li>The <code>HAVING</code> clause includes a predicate used to filter rows resulting from the <code>GROUP BY</code/> clause. Because it acts on the results of the <code>GROUP BY</code> clause, aggregation functions can be used in the <code>HAVING</code> clause predicate.</li>
+            <li>The <code>ORDER BY</code> clause identifies which columns to use to sort the resulting data, and in which direction to sort them (ascending or descending). Without an <code>ORDER BY</code> clause, the order of rows returned by an SQL query is undefined.</li>
+            <li>The <code>DISTINCT</code> keyword eliminates duplicate data.</li>
+            <li>The <code>LIMIT</code> clause specifies the number of records to return. Note that this clause is not supported by all SQL databases.</li>
+          </ul>
+          <p>The following example of a <code>SELECT</code> query returns a list of expensive books. The query retrieves all rows from the Book table in which the price column contains a value greater than 100.00. The result is sorted in ascending order by title. The asterisk (*) in the select list indicates that all columns of the Book table should be included in the result set.</p>
           <pre>
-            <code>INSERT INTO example
-(column1, column2, column3)
-VALUES
-('test', 'N', NULL);</code>
+            <code>SELECT *
+  FROM  Book
+  WHERE price > 100.00
+  ORDER BY title;</code>
           </pre>
-          <li>UPDATE modifies a set of existing table rows, e.g.:</li>
+          <p>The example below demonstrates a query of multiple tables, grouping, and aggregation, by returning a list of books and the number of authors associated with each book.</p>
           <pre>
-            <code>UPDATE example
-SET column1 = 'updated value'
-WHERE column2 = 'N';</code>
+            <code>SELECT Book.title AS Title,
+  FROM  Book
+  JOIN  Book_author
+  ON  Book.isbn = Book_author.isbn
+  GROUP BY Book.title;</code>
           </pre>
-          <li>DELETE removes existing rows from a table, e.g.:</li>
+          <p>Example output might resemble the following:</p>
           <pre>
-            <code>DELETE FROM example
-WHERE column2 = 'N';</code>
+            <code>Title                  Authors
+  ---------------------- -------
+  SQL Examples and Guide 4
+  The Joy of SQL         1
+  An Introduction to SQL 2
+  Pitfalls of SQL        1</code>
+        </pre>
+          <p>Under the precondition that isbn is the only common column name of the two tables and that a column named title only exists in the Book table, one could re-write the query above in the following form:</p>
+          <pre>
+            <code>SELECT title,
+  count(*) AS Authors
+  FROM  Book
+  NATURAL JOIN Book_author
+  GROUP BY title;</code>
           </pre>
-          <li>MERGE is used to combine the data of multiple tables. It combines the INSERT and UPDATE elements. It is defined in the SQL:2003 standard; prior to that, some databases provided similar functionality via different syntax, sometimes called "upsert".</li>
+          <p>However, manyvendors either do not support this approach, or require certain column-naming conventions for natural joins to work effectively.</p>
+          <p>SQL includes operators and functions for calculating values on stored values. SQL allows the use of expressions in the select list to project data, as in the following example, which returns a list of books that cost more than 100.00 with an additional sales_tax column containing a sales tax figure calculated at 6% of the price.</p>
           <pre>
-            <code>MERGE INTO table_name USING table_reference ON (condition)
-WHEN MATCHED THEN
-UPDATE SET column1 = value1 [, column2 = value2 ...]
-THEN NOT MATCHED THEN
-INSERT (column1 [, column2 ...]) VALUES (value1 [, value2 ...])</code>
-         </pre>
-        </ul>
+            <code>SELECT isbn,
+  title,
+  price,
+  price * 0.06 AS sales_tax
+  FROM  Book
+  WHERE price > 100.00
+  ORDER BY title;</code>
+          </pre>
+          <h3>Subqueries</h3>
+          <p>Queries can be nested so that the results of one query can be used in another query via a relational operator or aggregation function. A nested query is also known as a subquery. While joins and other table operations provide computationally superior (i.e. faster) alternatives in many cases, the use of subqueries introduces a hierarchy in execution that can be useful or necessary. In the following example, the aggregation function AVG receives as input the result of a subquery:</p>
+          <pre>
+            <code>SELECT isbn,
+  title,
+  price
+  FROM  Book
+  WHERE price < (SELECT AVG(price) FROM Book)
+  ORDER BY title;</code>
+          </pre>
+          <p>a subquery can use values from the outer query, in which case it is known as a correlated subquery.</p>
+          <p>Since 1999 the SQL standard allows WITH clauses for subqueries, i.e. named subqueries, usually called common table expressions (also called subquery factoring). CTEs can also be recursive by referring to themselves; the resulting mechanism allows tree or graph traversals (when represented as relations), and more generally fixpoint computations.</p>
+        </section>
+        <section class="main-section" id="Data_Manipulation">
+          <header><h2>Data Manipulation</h2></header>
+          <p>The Data Manipulation Language (DML) is the subset of SQL used to add, update and delete data:</p>
+          <ul>
+            <li>INSERT adds rows (formally tuples) to an existing table, e.g.:</li>
+            <pre>
+              <code>INSERT INTO example
+  (column1, column2, column3)
+  VALUES
+  ('test', 'N', NULL);</code>
+            </pre>
+            <li>UPDATE modifies a set of existing table rows, e.g.:</li>
+            <pre>
+              <code>UPDATE example
+  SET column1 = 'updated value'
+  WHERE column2 = 'N';</code>
+            </pre>
+            <li>DELETE removes existing rows from a table, e.g.:</li>
+            <pre>
+              <code>DELETE FROM example
+  WHERE column2 = 'N';</code>
+            </pre>
+            <li>MERGE is used to combine the data of multiple tables. It combines the INSERT and UPDATE elements. It is defined in the SQL:2003 standard; prior to that, some databases provided similar functionality via different syntax, sometimes called "upsert".</li>
+            <pre>
+              <code>MERGE INTO table_name USING table_reference ON (condition)
+  WHEN MATCHED THEN
+  UPDATE SET column1 = value1 [, column2 = value2 ...]
+  THEN NOT MATCHED THEN
+  INSERT (column1 [, column2 ...]) VALUES (value1 [, value2 ...])</code>
+          </pre>
+          </ul>
+        </section>
+        <section class="main-section" id="Resources">
+          <header><h2>Resources</h2></header>
+          <ul>
+            <li><a href="https://en.wikipedia.org/wiki/SQL_syntax" target=_blank>SQL Syntax on Wikipedia</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Book:SQL" target=_blank>SQL Wiki Book</a></li>
+            <li><a href="https://http://www.sqlclauses.com/" target=-blank>SQLclauses.com</a></li>
+          </ul>
+        </section>
+      </main>
+    </div>
 
-
-      </section>
-      <section class="main-section" id="Resources">
-        <header><h2>Resources</h2></header>
-        <ul>
-          <li><a href="https://en.wikipedia.org/wiki/SQL_syntax" target=_blank>SQL Syntax on Wikipedia</a></li>
-          <li><a href="https://en.wikipedia.org/wiki/Book:SQL" target=_blank>SQL Wiki Book</a></li>
-          <li><a href="https://http://www.sqlclauses.com/" target=-blank>SQLclauses.com</a></li>
-        </ul>
-      </section>
-    </main>
-  </div>
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" charset="UTF-8"></script>
-  <script src="./script.js"></script>
-  <!--<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" charset="UTF-8"></script>
+    <script src="./script.js"></script>
+    <!--<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>-->
   </body>
 
 
