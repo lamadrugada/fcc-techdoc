@@ -60,7 +60,8 @@ a {
   color: var(--primary-dark);
 }
 
-a:hover {
+a:hover,
+a:focus {
   color: var(--primary-light);
   background-color: var(--secondary-dark);
 }
@@ -222,6 +223,7 @@ th {
 
 }
 
+
 @media (max-width: 1100px) {
   
   main {
@@ -288,16 +290,18 @@ th {
   }
   
   nav ul {
-    display: none;
+    position: absolute;
+    top: 4.5rem;
+    background-color: var(--primary-dark);
   }
 
-
-
-  /*nav a {
-    padding: 0;
-    border-top: 1px var(--primary-light) solid;
+nav a {
+    padding: 0.5rem;
     text-align: center;
-  }*/
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+  }
 
   nav header {
     padding-top: 0.5rem;
@@ -332,8 +336,6 @@ th {
     margin: 0 0 0.5rem 0;
   }
 
-
-
   .hamburger {
     display: block;
     width: 100%;
@@ -356,15 +358,8 @@ th {
     background-color: var(--secondary-medium);
   }
 
-  
-
- 
-
-  
-   
-
   main,
-   th,
+  th,
   td {
     padding: 0.5rem;
   }
@@ -372,7 +367,6 @@ th {
   section {
     margin-bottom: 1rem;
   }
-
   
   pre code {
     background-color: var(--primary-light);
@@ -381,25 +375,25 @@ th {
     font-size: 1rem;
     line-height: 1.5rem;
   }
-
   
 }
 
+
 @media (max-width: 350px) {
 
-.searchwrapper {
-  left: 48%;
-  width: 52%;
-}
+  .searchwrapper {
+    left: 48%;
+    width: 52%;
+  }
 
-input,
-button {
-  margin: 0;
-  font-size: 0.8rem;
-}
+  input,
+  button {
+    margin: 0;
+    font-size: 0.8rem;
+  }
 
-input {
-  width: calc(100% - 1rem);
-}
+  input {
+    width: calc(100% - 1rem);
+  }
 
 }
