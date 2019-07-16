@@ -1,13 +1,21 @@
 /*TO DO:
-- zmienne dla kolorków
-- zmienne dla czcionek
+- media query dla małych
 
 */
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 @import url('https://fonts.googleapis.com/css?family=Francois+One');
+
+:root {
+  --font-main: 'Open Sans', Arial, non-serif;
+  --font-header: 'Francois One', Arial, sans-sans-serif;
+  --font-code: 'Source Code Pro', Courier, monospace;
+  --primary-dark: #D83112;
+  --primary-light: #FFC0B5;
+  --secondary-dark: #21272A;
+  --secondary-medium: #676C6F;
+}
 
 * {
   -moz-box-sizing: border-box;
@@ -22,8 +30,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', Arial, non-serif;
-  color: #21272A;
+  font-family: var(--font-main);
+  color: var(--secondary-dark);
   font-size: 1rem;
   line-height: 1.7rem;
 }
@@ -38,34 +46,35 @@ section ul {
 
 section li::before {
   content: '•';
-  color: #D83112;
+  color: var(--primary-dark);
   display: inline-block;
   width: 1rem;
   margin-left: -1rem}
 
 h1 {
-  font-family: 'Francois One', Arial, sans-sans-serif;
+  font-family: var(--font-header);
   color: #fff;
   font-size: 3rem;
   padding: 1rem 0 0 0;
   margin-top: 0;
   text-align: center;
-  text-shadow: 4px 4px #21272A;
+  text-shadow: 4px 4px var(--secondary-dark);
 }
 
 h2 {
   color: #000;
-  text-shadow: 2px 2px #FFC0B5;
+  text-shadow: 2px 2px var(--primary-light);
 }
 
 a {
   text-decoration: none;
-  color: #D83112;
+  color: var(--primary-dark);
+  ;
 }
 
 a:hover {
-  color: #FFC0B5;
-  background-color: #21272A;
+  color: var(--primary-light);
+  background-color: var(--secondary-dark);
 
 }
 
@@ -78,16 +87,16 @@ pre {
 }
 
 code {
-  font-family: 'Source Code Pro', Courier, monospace;
+  font-family: var(--font-code);
 }
 
 pre code {
   display: block;
   border-radius: 10px;
-  font-family: 'Source Code Pro', Courier, monospace;
+  font-family: var(--font-code);
   padding: 0.5rem;
   margin: 0 1rem;
-  background-color: #FFC0B5;
+  background-color: var(--primary-light);
   font-size: 1rem;
   line-height: 1.5rem;
 }
@@ -101,7 +110,7 @@ pre code {
 /*------NAVBAR------*/
 
 .navwrapper {
-  background-color: #D83112;
+  background-color: var(--primary-dark);
   margin: 0;
   padding: 2rem 0 2rem 0;
   width: 290px;
@@ -111,7 +120,7 @@ pre code {
 nav {
   position: fixed;
   width: 290px;
-  background-color: #D83112;
+  background-color: var(--primary-dark);
 }
 
 .searchwrapper {
@@ -125,20 +134,20 @@ nav a {
   display: block;
   width: 100%;
   font-weight: bold;
-  border-top: 1px #FFC0B5 solid;
+  border-top: 1px var(--primary-light) solid;
   padding: 0.5rem 0 0.5rem 2rem;
 }
 
 nav a:hover {
-  color: #FFC0B5;
-  background-color: #21272A;
+  color: var(--primary-light);
+  background-color: var(--secondary-dark);
 }
 
 input {
   border: 5px solid #fff;
   width: calc(100% - 3rem);
-  font-family: 'Open Sans', Arial, non-serif;
-  color: #21272A;
+  font-family: var(--font-main);
+  color: var(--secondary-dark);
   height: 2.5rem;
   font-size: 1rem;
   border-radius: 10px;
@@ -146,7 +155,7 @@ input {
 }
 
 input:focus, button:hover {
-  border-color: #21272A;
+  border-color: var(--secondary-dark);
 }
 
 button {
@@ -154,7 +163,7 @@ button {
   width: 2.5rem;
   border: 5px solid #fff;
   border-radius: 10px;
-  color: #21272A;
+  color: var(--secondary-dark);
   font-size: 1rem;
   height: 2.5rem;
   background-color: #fff;
@@ -166,7 +175,7 @@ nav ul {
   width: 100%;
   list-style-type: none;
   padding: 0;
-  border-bottom: 1px #FFC0B5 solid;
+  border-bottom: 1px var(--primary-light) solid;
 }
 
 main {
@@ -182,18 +191,18 @@ table {
 }
 
 th, td {
-  border: 1px solid #676C6F;
+  border: 1px solid var(--secondary-medium);
   padding: 0.75rem;
 }
 
 th {
-  background-color: #FFC0B5;
+  background-color: var(--primary-light);
   font-weight: bold;
 }
 
 mark {
-  border-bottom: 2px #D83112 solid;
-  background: #FFC0B5;
+  border-bottom: 2px var(--primary-dark) solid;
+  background: var(--primary-light);
 }
 
 /*--------------------------------------------MEDIA QUERIES----------------------------------*/
@@ -252,7 +261,7 @@ mark {
   }
 
   nav a {
-    border-top: 1px #FFC0B5 solid;
+    border-top: 1px var(--primary-light) solid;
     padding: 0;
     text-align: center;
   }
@@ -273,7 +282,7 @@ mark {
   pre code {
     padding: 0.5rem;
     margin: 0;
-    background-color: #FFC0B5;
+    background-color: var(--primary-light);
     font-size: 1rem;
     line-height: 1.5rem;
   }
@@ -285,7 +294,7 @@ mark {
 
     border: 1px solid #fff;
     width: 40%;
-    font-family: 'Open Sans', Arial, non-serif;
+    font-family: var(--font-main);
     color: #21272A;
     height: 1.5rem;
     font-size: 1rem;
@@ -294,7 +303,7 @@ mark {
   }
 
   input:focus, button:hover {
-    border-color: #21272A;
+    border-color: var(--secondary-dark);
   }
 
   button {
@@ -303,7 +312,7 @@ mark {
     top: 0.5rem;
     border: 1px solid #fff;
     border-radius: 5px;
-    color: #21272A;
+    color: var(--secondary-dark);
     font-size: 1rem;
     height: 1.5rem;
     background-color: #fff;
