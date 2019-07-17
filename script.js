@@ -16,13 +16,13 @@ document.addEventListener('DOMContentLoaded', function () {
     SEARCH_BUTTON.addEventListener('click', getMarked);
     
 
-    //HAMBURGER
+    //TOGGLED MENU FOR SMALLEST DEVICES
     const TOGGLER = document.querySelector('.toggler');
     const NAVIGATION_LIST = document.querySelector('.navList');
     
     let toggleMenu = () => {
         NAVIGATION_LIST.classList.toggle('show');
-    }
+    };
 
     TOGGLER.addEventListener('click', toggleMenu);
 });

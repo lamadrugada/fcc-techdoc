@@ -111,7 +111,7 @@
                 <td>Greater than</td>
               </tr>
               <tr>
-                <td><</td>
+                <td>&lt;</td>
                 <td>Less than</td>
               </tr>
               <tr>
@@ -119,7 +119,7 @@
                 <td>Greater than or equal</td>
               </tr>
               <tr>
-                <td><=</td>
+                <td>&lt;=</td>
                 <td>Less than or equal</td>
               </tr>
               <tr>
@@ -163,7 +163,7 @@
             <li>The <code>FROM</code> clause, which indicates the table(s) to retrieve data from. The <code>FROM</code> clause can include optional <code>JOIN</code> subclauses to specify the rules for joining tables.</li>
             <li>The<code>WHERE</code> clause includes a comparison predicate, which restricts the rows returned by the query. The <code>WHERE</code> clause eliminates all rows from the result set where the comparison predicate does not evaluate to True.</li>
             <li>The <code>GROUP BY</code> clause projects rows having common values into a smaller set of rows. <code>GROUP BY</code> is often used in conjunction with SQL aggregation functions or to eliminate duplicate rows from a result set. The <code>WHERE</code> clause is applied before the <code>GROUP BY</code> clause.</li>
-            <li>The <code>HAVING</code> clause includes a predicate used to filter rows resulting from the <code>GROUP BY</code/> clause. Because it acts on the results of the <code>GROUP BY</code> clause, aggregation functions can be used in the <code>HAVING</code> clause predicate.</li>
+            <li>The <code>HAVING</code> clause includes a predicate used to filter rows resulting from the <code>GROUP BY</code> clause. Because it acts on the results of the <code>GROUP BY</code> clause, aggregation functions can be used in the <code>HAVING</code> clause predicate.</li>
             <li>The <code>ORDER BY</code> clause identifies which columns to use to sort the resulting data, and in which direction to sort them (ascending or descending). Without an <code>ORDER BY</code> clause, the order of rows returned by an SQL query is undefined.</li>
             <li>The <code>DISTINCT</code> keyword eliminates duplicate data.</li>
             <li>The <code>LIMIT</code> clause specifies the number of records to return. Note that this clause is not supported by all SQL databases.</li>
@@ -172,7 +172,7 @@
           <pre>
             <code>SELECT *
   FROM  Book
-  WHERE price > 100.00
+  WHERE price &lt; 100.00
   ORDER BY title;</code>
           </pre>
           <p>The example below demonstrates a query of multiple tables, grouping, and aggregation, by returning a list of books and the number of authors associated with each book.</p>
