@@ -1,60 +1,55 @@
-<!--TO DO
-- arrows for hamburger menu
-- hamburger menu itself
--->
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
 
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel='stylesheet' href='./style.css'>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
 
     <title>TechDoc</title>
 
     <!--[if lt IE 9]>
-	   <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv-printshiv.min.js"></script>
+	   <script src='https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv-printshiv.min.js'></script>
     <![endif]-->
     
   </head>
 
 
   <body>
-    <div class="wrapper">
-      <div class="navwrapper">
-        <nav id="navbar">
+    <div class='wrapper'>
+      <div class='navwrapper'>
+        <nav id='navbar'>
           <header>
             <h1>SQL TechDoc</h1>
           </header>
-          <div class="searchwrapper">
-            <input type="text" id="searchinput" name="searchinput" placeholder="Search...">
-            <button type="button" id="searchbutton" name="searchbutton" class="searchButton">
-              <i class="fa fa-search"></i>
+          <div class='searchwrapper'>
+            <input type='text' id='searchinput' name='searchinput' placeholder='Search...'>
+            <button type='button' id='searchbutton' name='searchbutton' class='searchButton'>
+              <i class='fa fa-search'></i>
             </button>
           </div>
-          <div class="hamburger">
+          <div class='toggler'>
             <span>Menu</span>
           </div>
-          <ul>
-            <li><a href="#Introduction" class="nav-link">Introduction</a></li>
-            <li><a href="#Data_Types" class="nav-link">Data Types</a></li>
-            <li><a href="#Elements" class="nav-link">Elements</a></li>
-            <li><a href="#Operators" class="nav-link">Operators</a></li>
-            <li><a href="#Queries_And_Subqueries" class="nav-link">Queries and subqueries</a></li>
-            <li><a href="#Data_Manipulation" class="nav-link">Data Manipulation</a></li>
-            <li><a href="#Resources" class="nav-link">Resources</a></li>
+          <ul class='navList'>
+            <li><a href='#Introduction' class='nav-link'>Introduction</a></li>
+            <li><a href='#Data_Types' class='nav-link'>Data Types</a></li>
+            <li><a href='#Elements' class='nav-link'>Elements</a></li>
+            <li><a href='#Operators' class='nav-link'>Operators</a></li>
+            <li><a href='#Queries_And_Subqueries' class='nav-link'>Queries and subqueries</a></li>
+            <li><a href='#Data_Manipulation' class='nav-link'>Data Manipulation</a></li>
+            <li><a href='#Resources' class='nav-link'>Resources</a></li>
           </ul>
         </nav>
       </div>
-      <main id="main-doc">
-        <section class="main-section" id="Introduction">
+      <main id='main-doc'>
+        <section class='main-section' id='Introduction'>
           <header><h2>Introduction</h2></header>
           <p>SQL (Structured Query Language) is a domain-specific language used in programming and designed for managing data held in a relational database management system (RDBMS), or for stream processing in a relational data stream management system (RDSMS). It is particularly useful in handling structured data where there are relations between different entities/variables of the data. SQL offers two main advantages over older read/write APIs like ISAM or VSAM: first, it introduced the concept of accessing many records with one single command; and second, it eliminates the need to specify how to reach a record, e.g. with or without an index.</p>
           <p>SQL was initially developed at IBM by Donald D. Chamberlin and Raymond F. Boyce after learning about the relational model from Ted Codd in the early 1970s. This version, initially called SEQUEL (Structured English Query Language), was designed to manipulate and retrieve data stored in IBM's original quasi-relational database management system, System R, which a group at IBM San Jose Research Laboratory had developed during the 1970s.</p>
         </section>
-        <section class="main-section" id="Data_Types">
+        <section class='main-section' id='Data_Types'>
           <header><h2>Data Types</h2></header>
           <p>Each column in an SQL table declares the type(s) that column may contain. ANSI SQL includes the following data types.</p>
           <h3>Character strings and national character strings</h3>
@@ -81,7 +76,7 @@
             <li><code>DECFLOAT(precision)</code></li>
           </ul>
         </section>
-        <section class="main-section" id="Elements">
+        <section class='main-section' id='Elements'>
           <header><h2>Elements</h2></header>
           <p>The SQL language is subdivided into several language elements, including:</p>
           <ul>
@@ -89,11 +84,11 @@
             <li>Expressions, which can produce either scalar values, or tables consisting of columns and rows of data</li>
             <li>Predicates, which specify conditions that can be evaluated to SQL three-valued logic (3VL) (true/false/unknown) or Boolean truth values and are used to limit the effects of statements and queries, or to change program flow.</li>
             <li>Queries, which retrieve the data based on specific criteria. This is an important element of SQL.</li>
-            <li>Statements, which may have a persistent effect on schemata and data, or may control transactions, program flow, connections, sessions, or diagnostics. SQL statements also include the semicolon (";") statement terminator. Though not required on every platform, it is defined as a standard part of the SQL grammar.</li>
+            <li>Statements, which may have a persistent effect on schemata and data, or may control transactions, program flow, connections, sessions, or diagnostics. SQL statements also include the semicolon (';') statement terminator. Though not required on every platform, it is defined as a standard part of the SQL grammar.</li>
             <li>Insignificant whitespace is generally ignored in SQL statements and queries, making it easier to format SQL code for readability.</li>
           </ul>
         </section>
-        <section class="main-section" id="Operators">
+        <section class='main-section' id='Operators'>
           <header><h2>Operators</h2></header>
           <table>
             <thead>
@@ -159,11 +154,11 @@
           </table>
 
         </section>
-        <section class="main-section" id="Queries_And_Subqueries">
+        <section class='main-section' id='Queries_And_Subqueries'>
           <header><h2>Queries and Subqueries</h2></header>
           <p>The most common operation in SQL, the query, makes use of the declarative <code>SELECT</code> statement. <code>SELECT</code> retrieves data from one or more tables, or expressions. Standard <code>SELECT</code> statements have no persistent effects on the database. Some non-standard implementations of <code>SELECT</code> can have persistent effects, such as the <code>SELECT INTO</code> syntax provided in some databases.</p>
           <p>Queries allow the user to describe desired data, leaving the database management system (DBMS) to carry out planning, optimizing, and performing the physical operations necessary to produce that result as it chooses.</p>
-          <p>A query includes a list of columns to include in the final result, normally immediately following the <code>SELECT</code> keyword. An asterisk ("*") can be used to specify that the query should return all columns of the queried tables. <code>SELECT</code> is the most complex statement in SQL, with optional keywords and clauses that include:</p>
+          <p>A query includes a list of columns to include in the final result, normally immediately following the <code>SELECT</code> keyword. An asterisk ('*') can be used to specify that the query should return all columns of the queried tables. <code>SELECT</code> is the most complex statement in SQL, with optional keywords and clauses that include:</p>
           <ul>
             <li>The <code>FROM</code> clause, which indicates the table(s) to retrieve data from. The <code>FROM</code> clause can include optional <code>JOIN</code> subclauses to specify the rules for joining tables.</li>
             <li>The<code>WHERE</code> clause includes a comparison predicate, which restricts the rows returned by the query. The <code>WHERE</code> clause eliminates all rows from the result set where the comparison predicate does not evaluate to True.</li>
@@ -229,7 +224,7 @@
           <p>a subquery can use values from the outer query, in which case it is known as a correlated subquery.</p>
           <p>Since 1999 the SQL standard allows WITH clauses for subqueries, i.e. named subqueries, usually called common table expressions (also called subquery factoring). CTEs can also be recursive by referring to themselves; the resulting mechanism allows tree or graph traversals (when represented as relations), and more generally fixpoint computations.</p>
         </section>
-        <section class="main-section" id="Data_Manipulation">
+        <section class='main-section' id='Data_Manipulation'>
           <header><h2>Data Manipulation</h2></header>
           <p>The Data Manipulation Language (DML) is the subset of SQL used to add, update and delete data:</p>
           <ul>
@@ -251,7 +246,7 @@
               <code>DELETE FROM example
   WHERE column2 = 'N';</code>
             </pre>
-            <li>MERGE is used to combine the data of multiple tables. It combines the INSERT and UPDATE elements. It is defined in the SQL:2003 standard; prior to that, some databases provided similar functionality via different syntax, sometimes called "upsert".</li>
+            <li>MERGE is used to combine the data of multiple tables. It combines the INSERT and UPDATE elements. It is defined in the SQL:2003 standard; prior to that, some databases provided similar functionality via different syntax, sometimes called 'upsert'.</li>
             <pre>
               <code>MERGE INTO table_name USING table_reference ON (condition)
   WHEN MATCHED THEN
@@ -261,20 +256,20 @@
           </pre>
           </ul>
         </section>
-        <section class="main-section" id="Resources">
+        <section class='main-section' id='Resources'>
           <header><h2>Resources</h2></header>
           <ul>
-            <li><a href="https://en.wikipedia.org/wiki/SQL_syntax" target=_blank>SQL Syntax on Wikipedia</a></li>
-            <li><a href="https://en.wikipedia.org/wiki/Book:SQL" target=_blank>SQL Wiki Book</a></li>
-            <li><a href="https://http://www.sqlclauses.com/" target=-blank>SQLclauses.com</a></li>
+            <li><a href='https://en.wikipedia.org/wiki/SQL_syntax' target=_blank>SQL Syntax on Wikipedia</a></li>
+            <li><a href='https://en.wikipedia.org/wiki/Book:SQL' target=_blank>SQL Wiki Book</a></li>
+            <li><a href='https://http://www.sqlclauses.com/' target=-blank>SQLclauses.com</a></li>
           </ul>
         </section>
       </main>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" charset="UTF-8"></script>
-    <script src="./script.js"></script>
-    <!--<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js' charset='UTF-8'></script>
+    <script src='./script.js'></script>
+    <!--<script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>-->
   </body>
 
 
