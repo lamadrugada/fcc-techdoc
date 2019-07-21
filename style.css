@@ -2,6 +2,85 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 @import url('https://fonts.googleapis.com/css?family=Francois+One');
 
+/* IE & EDGE CORNER */
+
+body,
+input,
+button {
+  font-family: 'Open Sans', Arial, non-serif;
+  color: #21272A;
+}
+
+h1 {
+  font-family: 'Francois One', Arial, sans-sans-serif;
+  text-shadow: 4px 4px #21272A;
+}
+
+code,
+pre code {
+  font-family: 'Source Code Pro', Courier, monospace;
+}
+
+a,
+section li::before {
+  color: #D83112;
+}
+
+nav,
+.show {
+  background-color: #D83112;
+}
+
+mark {
+  border-bottom-color: #D83112;
+  background: #FFC0B5;
+}
+
+pre code,
+th {
+  background-color: #FFC0B5;
+}
+
+h2 {
+  text-shadow: 2px 2px #FFC0B5;
+  color: #21272A;
+}
+
+a:hover,
+a:focus {
+  color: #FFC0B5;
+  background-color: #21272A;
+}
+
+nav a {
+  border-top-color: #FFC0B5;
+}
+
+nav ul {
+  border-bottom-color: #FFC0B5;
+}
+
+input:focus,
+button:hover {
+  border-color: #21272A;
+}
+
+.toggler {
+  background-color: #21272A;
+}
+
+.toggler:hover,
+.toggler:focus {
+  background-color: #676C6F;
+}
+
+th,
+td {
+  border: 1px solid #676C6F;
+}
+
+
+
 :root {
   --font-main: 'Open Sans', Arial, non-serif;
   --font-header: 'Francois One', Arial, sans-sans-serif;
@@ -250,6 +329,7 @@ th {
     font-size: 1.5rem;
     line-height: 1.5rem;
     text-shadow: 3px 3px var(--secondary-dark);
+    text-shadow: 3px 3px #21272A;
   }
 
   h2 {
